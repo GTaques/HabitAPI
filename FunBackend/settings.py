@@ -126,7 +126,7 @@ STATIC_URL = '/static/'
 
 # Cors WHITELIST
 CORS_ORIGIN_WHITELIST = [
-    "http://localhost:4200"
+    "http://localhost:4201"
 ]
 
 CORS_ALLOW_METHODS = [
