@@ -79,8 +79,13 @@ WSGI_APPLICATION = 'FunBackend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'HOST': 'db',
+        'PORT': '5432',
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
@@ -126,7 +131,7 @@ STATIC_URL = '/static/'
 
 # Cors WHITELIST
 CORS_ORIGIN_WHITELIST = [
-    "http://localhost:4201"
+    "http://localhost:4200"
 ]
 
 CORS_ALLOW_METHODS = [
